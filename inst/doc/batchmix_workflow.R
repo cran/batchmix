@@ -24,7 +24,7 @@ group_weights <- rep(1 / K, K)
 batch_weights <- rep(1 / B, B)
 dfs <- c(4, 7, 15, 60, 120)
 
-my_data <- generateBatchDataMVT(
+my_data <- generateBatchData(
   N,
   P,
   group_means,
@@ -33,7 +33,8 @@ my_data <- generateBatchDataMVT(
   batch_var,
   group_weights,
   batch_weights,
-  dfs
+  type = "MVT",
+  group_dfs = dfs
 )
 
 ## ----dataClean----------------------------------------------------------------
@@ -100,7 +101,6 @@ burn <- 5000
 processed_samples <- processMCMCChains(new_output, burn)
 
 ## ----pca----------------------------------------------------------------------
-
 chain_used <- processed_samples[[1]]
 
 pc <- prcomp(X, scale = T)
@@ -117,7 +117,7 @@ plot_df <- data.frame(
   batch = factor(batch_vec)
 )
 
-plot_df |> 
+plot_df |>
   ggplot(aes(
     x = PC1,
     y = PC2,
@@ -126,7 +126,7 @@ plot_df |>
   )) +
   geom_point()
 
-plot_df |> 
+plot_df |>
   ggplot(aes(
     x = PC1_bf,
     y = PC2_bf,
@@ -137,6 +137,5 @@ plot_df |>
 
 test_inds <- which(fixed == 0)
 
-sum(true_labels[test_inds] == chain_used$pred[test_inds])/length(test_inds)
-
+sum(true_labels[test_inds] == chain_used$pred[test_inds]) / length(test_inds)
 

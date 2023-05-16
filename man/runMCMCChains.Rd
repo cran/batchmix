@@ -45,7 +45,11 @@ runMCMCChains(
 from.}
 
 \item{type}{Character indicating density type to use. One of 'MVN'
-(multivariate normal distribution) or 'MVT' (multivariate t distribution).}
+(multivariate normal distribution) or 'MVT' (multivariate t distribution).
+``weights`` which is a matrix with K x B columns. The columns are ordered by
+batch, i.e. the first K columns contain the class weights in the first batch,
+the second K are the class weights in the second batch, etc. If generic
+weights are used then this matrix has K columns, one for each component weight.}
 
 \item{K_max}{The number of components to include (the upper bound on the
 number of clusters in each sample). Defaults to the number of unique labels
@@ -53,7 +57,7 @@ in ``initial_labels``.}
 
 \item{initial_labels}{Initial clustering, if none given defaults to a random draw.}
 
-\item{fixed}{Which items are fixed in their initial label. If not given, 
+\item{fixed}{Which items are fixed in their initial label. If not given,
 defaults to a vector of 0 meaning the model is run unsupervised.}
 
 \item{alpha}{The concentration parameter for the stick-breaking prior and the
@@ -107,7 +111,7 @@ of freedom. Defaults to draws from the prior distribution.}
 be printed.}
 }
 \value{
-A list of named lists. Each entry is the output of 
+A list of named lists. Each entry is the output of
 ``runBatchMix``.
 }
 \description{
@@ -138,7 +142,7 @@ n_chains <- 4
 
 # MCMC samples
 samples <- runMCMCChains(X, n_chains, R, thin, batch_vec, "MVN",
-  initial_labels = labels, 
+  initial_labels = labels,
   fixed = fixed
 )
 

@@ -31,7 +31,8 @@ mvtSampler::mvtSampler(
   arma::mat _X,
   double _m_scale,
   double _rho,
-  double _theta
+  double _theta,
+  bool _sample_m_scale
 ) : sampler(_K,
 _B,
 _labels,
@@ -51,7 +52,8 @@ mvnSampler(
   _X,
   _m_scale,
   _rho,
-  _theta
+  _theta,
+  _sample_m_scale
 ) {
   
   // Hyperparameter for the d.o.f for the t-distn
@@ -84,7 +86,9 @@ void mvtSampler::sampleDFPrior() {
 };
 
 void mvtSampler::sampleFromPriors() {
-  
+  if(sample_m_scale) {
+    sampleMScalePrior();
+  }
   sampleCovPrior();
   sampleMuPrior();
   sampleDFPrior();
@@ -216,7 +220,7 @@ double mvtSampler::mLogKernel(arma::uword b, arma::vec m_b, arma::mat mean_sum) 
   );
   
   for(arma::uword p = 0; p < P; p++) {
-    score += -0.5 * t * std::pow(m_b(p) - delta, 2.0);
+    score += -0.5 * batch_shift_prior_precision * std::pow(m_b(p) - batch_shift_prior_mean, 2.0);
   }
   return score;
 };
@@ -359,6 +363,9 @@ void mvtSampler::metropolisStep() {
   clusterDFMetropolis();
   
   // Metropolis step for batch parameters
+  if(sample_m_scale) {
+    sampleMScalePosterior();
+  }
   batchScaleMetropolis();
   batchShiftMetorpolis();
 };

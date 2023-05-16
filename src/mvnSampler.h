@@ -8,6 +8,7 @@
 // included dependencies
 # include <RcppArmadillo.h>
 # include "sampler.h"
+# include "genericFunctions.h"
 
 // =============================================================================
 // mvnSampler class
@@ -44,6 +45,8 @@ class mvnSampler: virtual public sampler {
   
 public:
   
+  bool sample_m_scale = true;
+  
   arma::uword n_param_cluster = 1 + P + P * (P + 1) * 0.5, 
     n_param_batch = 2 * P;
   
@@ -52,16 +55,22 @@ public:
     nu = P + 2, 
     
     // Hyperparameters for the batch mean
-    delta = 0.0,
+    batch_shift_prior_mean = 0.0,
+    batch_shift_prior_precision = 1.0,
+    delta_2 = 0.0,
     t = 0.0,
     m_scale = 0.01,
-    // lambda,
+    lambda_2 = 0.01,
     
     // Hyperparameters for the batch scale. These choices expects sampled
     // values in the range of 1.2 to 2.0 which seems a sensible prior belief.
     rho = 3.0,
     theta = 1.0, 
     S_loc = 1.0, // this gives the batch scale a support of (1.0, \infty)
+    
+    // Hyperparameters for sampling m_scale
+    a = 3.0,
+    b = 1.0,
     
     // Proposal windows (initialised but assigned values by user)
     mu_proposal_window = 0.0,
@@ -87,9 +96,10 @@ public:
     arma::uvec _batch_vec,
     arma::vec _concentration,
     arma::mat _X,
-    double m_scale,
-    double rho,
-    double theta
+    double _m_scale,
+    double _rho,
+    double _theta,
+    bool _sample_m_scale
   );
   
   // Destructor
@@ -100,6 +110,10 @@ public:
   void sampleMuPrior();
   void sampleSPrior();
   void sampleMPrior();
+  
+  // M_scale hyperparameter
+  void sampleMScalePrior();
+  void sampleMScalePosterior();
   
   // Update the common matrix manipulations to avoid recalculating N times
   virtual void matrixCombinations();

@@ -19,7 +19,7 @@ runBatchMix(
   m_proposal_window = 0.3^2,
   S_proposal_window = 0.01,
   t_df_proposal_window = 0.015,
-  m_scale = 0.01,
+  m_scale = NULL,
   rho = 3,
   theta = 1,
   initial_class_means = NULL,
@@ -57,15 +57,15 @@ defaults to a vector of 0 meaning the model is run unsupervised.}
 weights in the model.}
 
 \item{mu_proposal_window}{The proposal window for the cluster mean proposal
-kernel. Making this smaller will normally increase the acceptance rate for 
-the proposed values in the Metropolis-Hastings sampler. The proposal density 
+kernel. Making this smaller will normally increase the acceptance rate for
+the proposed values in the Metropolis-Hastings sampler. The proposal density
 is a Gaussian distribution, the window is the variance.}
 
 \item{cov_proposal_window}{The proposal window for the cluster covariance
 proposal kernel. The proposal density is a Wishart distribution, this
-argument is the reciprocal of the degree of freedom. It is recommended to 
-set this aiming for accpetance rates of greater than 0.5 for the covariance 
-matrices (e.g., between 2e-03 and 1e-04 is a good range to consider 
+argument is the reciprocal of the degree of freedom. It is recommended to
+set this aiming for accpetance rates of greater than 0.5 for the covariance
+matrices (e.g., between 2e-03 and 1e-04 is a good range to consider
 initially). As the entire covariance matrix is sampled at once exploration is
 difficult.}
 
@@ -75,7 +75,7 @@ variance.}
 
 \item{S_proposal_window}{The proposal window for the batch standard deviation
  proposal kernel. The proposal density is a Gamma distribution, this
-argument is the reciprocal of the rate. Recommended range to initially 
+argument is the reciprocal of the rate. Recommended range to initially
 consider is 0.015 to 2e-03, though smaller values might be necessary
 particularly in higher dimensional data.}
 
