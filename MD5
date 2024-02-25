@@ -1,8 +1,9 @@
-0648d03ef52808c1131012df3e81453f *DESCRIPTION
-9a7e3b19ffd5daeea48455503be38f27 *NAMESPACE
+55f7d0c6735d8da53dfbb7b23b3df3dc *DESCRIPTION
+dce9c720fe1a62d73118ec0e667d4df2 *NAMESPACE
 5b45ddefaacc94124b69e287be51f5aa *R/RcppExports.R
+352647e3d4795dcdff93904110225a42 *R/VI.lb.R
 1e482e8e13d7d0a6f9aaeb523fc088f2 *R/batchSemiSupervisedMixtureModel.R
-198212d1223eeca2cd74114908ea967c *R/batchmix-package.R
+5bea74f547bea176d8bd4877a551defb *R/batchmix-package.R
 1885944f0b3ec13db8a62e7120236788 *R/calcAllocProb.R
 0bcaf037b2c56095b577fefe235a0333 *R/catch-routine-registration.R
 e60f164e6e8ba9f6403ddfc3307d87f7 *R/checkDataGenerationInputs.R
@@ -20,6 +21,7 @@ b4f195da1d0c9c9c629f2b9a77d1ff5b *R/generateBatchDataMVT.R
 442e7af0022251155a39869a3fcb2901 *R/getSampledBatchScale.R
 d93a45ca72862d23d468ff4de1fee104 *R/getSampledBatchShift.R
 d2c94945988c33f8688409204372fbe5 *R/getSampledClusterMeans.R
+97a1f33ef9d94cfa31d0e52732845c5c *R/minVI.R
 7acd1c34d3b2735a30b2d4ff1f42cd58 *R/plotAcceptanceRates.R
 504c1882447db1268b8ef6f1079e30c1 *R/plotLikelihoods.R
 f2caf6c1b0f1b59264083764d0ca279e *R/plotSampledBatchMeans.R
@@ -27,7 +29,7 @@ f2caf6c1b0f1b59264083764d0ca279e *R/plotSampledBatchMeans.R
 48a63af06fb21a980c1f660a3a8ddd40 *R/plotSampledClusterMeans.R
 867d778d38f1a8b5ef8f92adf824e469 *R/plotSampledParameter.R
 24f6eb90d4a56f9a9bcdee6dc791f4f3 *R/predictClass.R
-5f4ffd61d7f88536217aee23252d992c *R/predictFromMultipleChains.R
+f3b2828240a86e39710caafafdd7e3f1 *R/predictFromMultipleChains.R
 e52eafb612ed7bd2653880c835414cbb *R/prepareInitialParameters.R
 04c03ab9c0d689207c60394c5003ecc5 *R/processMCMCChain.R
 fba523b555e0b9728240a27423609c44 *R/processMCMCChains.R
@@ -40,8 +42,9 @@ f47e126247bfcb25252bba37f392de50 *R/rStickBreakingPrior.R
 fc6087748db360de8f13783b73c7a4e6 *inst/doc/batchmix_workflow.R
 ba7d6d9581a0dafcb986642edfb7baf8 *inst/doc/batchmix_workflow.Rmd
 12cc497a754affc3b9e8c11880584ba1 *inst/doc/batchmix_workflow.html
+9fe265fad8731008869645e33d007377 *man/VI.lb.Rd
 23c271062bba88eaa0ffb22727996cc1 *man/batchSemiSupervisedMixtureModel.Rd
-7381932f4f3744739420411f79a163e5 *man/batchmix-package.Rd
+88252c2a28e499b42670111b45d6e28b *man/batchmix-package.Rd
 7a7e1247fec3e50e3277172df7cdf9f3 *man/calcAllocProb.Rd
 bf98d704737b495aa38f8f5cdf7c8796 *man/checkDataGenerationInputs.Rd
 eee0b06150b82c3212d13f99e34b89d8 *man/checkProposalWindows.Rd
@@ -62,6 +65,7 @@ f709c6e0de0a2c5243215d6420e7ae0a *man/getLikelihood.Rd
 b6723a72f51a184e6a0709cf697afb5c *man/getSampledClusterMeans.Rd
 0bbec0d1a19d6b5ae03603bf33dfbb6f *man/invGammaLogLikelihood.Rd
 177d0ce22a92e20537a77045eb650812 *man/invWishartLogLikelihood.Rd
+63fadf1352e0b0b642765fbc9185d243 *man/minVI.Rd
 a7cd9cbc19c1bba01b4d8bb1f8c76d31 *man/plotAcceptanceRates.Rd
 e26b9b6381bc22e4cdab93d4f8d5147c *man/plotLikelihoods.Rd
 4b2dc59904cc62b50f268cce49f3d4d3 *man/plotSampledBatchMeans.Rd
