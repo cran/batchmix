@@ -1,11 +1,11 @@
-55f7d0c6735d8da53dfbb7b23b3df3dc *DESCRIPTION
+a46baac849642194316e9483d22fef60 *DESCRIPTION
 dce9c720fe1a62d73118ec0e667d4df2 *NAMESPACE
 5b45ddefaacc94124b69e287be51f5aa *R/RcppExports.R
 352647e3d4795dcdff93904110225a42 *R/VI.lb.R
 1e482e8e13d7d0a6f9aaeb523fc088f2 *R/batchSemiSupervisedMixtureModel.R
-5bea74f547bea176d8bd4877a551defb *R/batchmix-package.R
+d7d035695e767ba364b7e6ac8e5527d7 *R/batchmix-package.R
 1885944f0b3ec13db8a62e7120236788 *R/calcAllocProb.R
-0bcaf037b2c56095b577fefe235a0333 *R/catch-routine-registration.R
+fb5c76869078fa48b65dbf85a82940af *R/catch-routine-registration.R
 e60f164e6e8ba9f6403ddfc3307d87f7 *R/checkDataGenerationInputs.R
 2d178416478b9e5c443b1c0f298ad72c *R/checkProposalWindows.R
 6852c7c925373ef92d9313324f2294b0 *R/collectAcceptanceRates.R
@@ -29,7 +29,7 @@ f2caf6c1b0f1b59264083764d0ca279e *R/plotSampledBatchMeans.R
 48a63af06fb21a980c1f660a3a8ddd40 *R/plotSampledClusterMeans.R
 867d778d38f1a8b5ef8f92adf824e469 *R/plotSampledParameter.R
 24f6eb90d4a56f9a9bcdee6dc791f4f3 *R/predictClass.R
-f3b2828240a86e39710caafafdd7e3f1 *R/predictFromMultipleChains.R
+a9b689e91233fc1bece6dfb5f8f96c83 *R/predictFromMultipleChains.R
 e52eafb612ed7bd2653880c835414cbb *R/prepareInitialParameters.R
 04c03ab9c0d689207c60394c5003ecc5 *R/processMCMCChain.R
 fba523b555e0b9728240a27423609c44 *R/processMCMCChains.R
@@ -41,8 +41,8 @@ f47e126247bfcb25252bba37f392de50 *R/rStickBreakingPrior.R
 60bdda4b3fb657e2a8307e1b6cb7e85b *build/vignette.rds
 fc6087748db360de8f13783b73c7a4e6 *inst/doc/batchmix_workflow.R
 ba7d6d9581a0dafcb986642edfb7baf8 *inst/doc/batchmix_workflow.Rmd
-12cc497a754affc3b9e8c11880584ba1 *inst/doc/batchmix_workflow.html
-9fe265fad8731008869645e33d007377 *man/VI.lb.Rd
+0133830e5ab623bef056a17b8c75deba *inst/doc/batchmix_workflow.html
+934b2c4a7b9d1f0a59af01ea4eef447c *man/VI.lb.Rd
 23c271062bba88eaa0ffb22727996cc1 *man/batchSemiSupervisedMixtureModel.Rd
 88252c2a28e499b42670111b45d6e28b *man/batchmix-package.Rd
 7a7e1247fec3e50e3277172df7cdf9f3 *man/calcAllocProb.Rd
@@ -65,7 +65,7 @@ f709c6e0de0a2c5243215d6420e7ae0a *man/getLikelihood.Rd
 b6723a72f51a184e6a0709cf697afb5c *man/getSampledClusterMeans.Rd
 0bbec0d1a19d6b5ae03603bf33dfbb6f *man/invGammaLogLikelihood.Rd
 177d0ce22a92e20537a77045eb650812 *man/invWishartLogLikelihood.Rd
-63fadf1352e0b0b642765fbc9185d243 *man/minVI.Rd
+68fe5bce2e55e3946eec9ce0eaeeeeda *man/minVI.Rd
 a7cd9cbc19c1bba01b4d8bb1f8c76d31 *man/plotAcceptanceRates.Rd
 e26b9b6381bc22e4cdab93d4f8d5147c *man/plotLikelihoods.Rd
 4b2dc59904cc62b50f268cce49f3d4d3 *man/plotSampledBatchMeans.Rd
@@ -118,11 +118,4 @@ bd1f139cbb2bbc18fc08d9c1f719aaa2 *src/samplerFactory.cpp
 3cd4378e2f5ca4465a9187d298f89e66 *src/semisupervisedSampler.h
 d86e1b08826f1b6c94202159d6b6a617 *src/semisupervisedSamplerFactory.cpp
 b7221e7805936fd24881f6b3a93c9c0a *src/semisupervisedSamplerFactory.h
-3332a4affe5b211b37b65a3d3311d9ba *src/test-example.cpp
-13725d9f4b791f0c90eb65f97a0aaa0e *src/test-mvnKernels.cpp
-bf5d60d4d4b3199f7678475534c9bdd7 *src/test-mvtKernels.cpp
-d228fd3943902bad6b893142441767e3 *src/test-pdfs.cpp
-c2cb0c30e10da611f9fbe56aea52f7a9 *src/test-runner.cpp
-d3c02c2fbd1bad384bb1545f1fc6f29d *tests/testthat/test-cpp.R
-da35c88118982e7444ed931206391b3d *tests/testthat/test-pdfs.R
 ba7d6d9581a0dafcb986642edfb7baf8 *vignettes/batchmix_workflow.Rmd
