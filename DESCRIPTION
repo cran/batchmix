@@ -3,7 +3,7 @@ Type: Package
 Title: Semi-Supervised Bayesian Mixture Models Incorporating Batch
         Correction
 License: GPL-3
-Version: 2.2.0
+Version: 2.2.1
 Authors@R: c(person(given = "Stephen", family = "Coleman",
                     email = "stcolema@tcd.ie",
                     role = c("aut","cre")),
@@ -29,10 +29,10 @@ BugReports: https://github.com/stcolema/batchmix/issues
 RoxygenNote: 7.3.1
 VignetteBuilder: knitr, rmarkdown
 NeedsCompilation: yes
-Packaged: 2024-04-18 15:09:53 UTC; colemste
+Packaged: 2024-05-20 18:06:57 UTC; colemste
 Author: Stephen Coleman [aut, cre],
   Paul Kirk [aut],
   Chris Wallace [aut]
 Maintainer: Stephen Coleman <stcolema@tcd.ie>
 Repository: CRAN
-Date/Publication: 2024-04-18 15:42:37 UTC
+Date/Publication: 2024-05-21 10:40:16 UTC

@@ -1,4 +1,4 @@
-a46baac849642194316e9483d22fef60 *DESCRIPTION
+2d85f8b927321d54dd33df0b1a5a06cc *DESCRIPTION
 dce9c720fe1a62d73118ec0e667d4df2 *NAMESPACE
 5b45ddefaacc94124b69e287be51f5aa *R/RcppExports.R
 352647e3d4795dcdff93904110225a42 *R/VI.lb.R
@@ -38,13 +38,13 @@ f47e126247bfcb25252bba37f392de50 *R/rStickBreakingPrior.R
 877587b7a2165eee6b85d59b15aedc8a *R/runMCMCChains.R
 1caeb62feff3f755f715203b3686dbc9 *R/samplePriorLabels.R
 43ef9be2342db41ee351f21dbe67ab3e *README.md
-60bdda4b3fb657e2a8307e1b6cb7e85b *build/vignette.rds
+e400ea30c439c304592dc9a4ac5640d7 *build/vignette.rds
 fc6087748db360de8f13783b73c7a4e6 *inst/doc/batchmix_workflow.R
 ba7d6d9581a0dafcb986642edfb7baf8 *inst/doc/batchmix_workflow.Rmd
-0133830e5ab623bef056a17b8c75deba *inst/doc/batchmix_workflow.html
+028b76675d4a8a110ad0ae353b019277 *inst/doc/batchmix_workflow.html
 934b2c4a7b9d1f0a59af01ea4eef447c *man/VI.lb.Rd
 23c271062bba88eaa0ffb22727996cc1 *man/batchSemiSupervisedMixtureModel.Rd
-88252c2a28e499b42670111b45d6e28b *man/batchmix-package.Rd
+1b39e20390fa69f10ee2874b9924db29 *man/batchmix-package.Rd
 7a7e1247fec3e50e3277172df7cdf9f3 *man/calcAllocProb.Rd
 bf98d704737b495aa38f8f5cdf7c8796 *man/checkDataGenerationInputs.Rd
 eee0b06150b82c3212d13f99e34b89d8 *man/checkProposalWindows.Rd
@@ -86,8 +86,8 @@ c64de01cb17b0ade102f5aad45919a00 *man/sampleMVT.Rd
 263d53c88dae2221620824250a408fa9 *man/sampleSemisupervisedMVN.Rd
 a1e5c67af4a1a37ec159a836a2f571e1 *man/sampleSemisupervisedMVT.Rd
 1f4b73228454b0de97353461c820bf14 *man/wishartLogLikelihood.Rd
-dabf6e18c628e0fdcaf2b8da95f8ec2c *src/Makevars
-dabf6e18c628e0fdcaf2b8da95f8ec2c *src/Makevars.win
+ae09d1dfa6ff76c2a1e40db82148b025 *src/Makevars
+ae09d1dfa6ff76c2a1e40db82148b025 *src/Makevars.win
 9ef73bc65ae887fc0c16a09fd1de33bd *src/RcppExports.cpp
 c9beaddd7e61c57353d920a4d2f065da *src/createSimilarityMat.cpp
 b43aa0147e30fd9cf980a3e5f5121e8a *src/genericFunctions.cpp
@@ -111,10 +111,10 @@ fc662a0e78fb18734ab545b9e0a412f7 *src/sampleMVT.cpp
 f8afc2989f827f74665b464449f911bc *src/sampleSemisupervisedMVT.cpp
 d45c565e2bb5bb9477ac37df6bf93672 *src/sampleSemisupervisedMVT.h
 61d95113a98cc473a4d5917da6fc103b *src/sampler.cpp
-d97354cb03158cbf687e139c24804451 *src/sampler.h
+9b1acc1afa063ee9c93b7265654e9a7a *src/sampler.h
 bd1f139cbb2bbc18fc08d9c1f719aaa2 *src/samplerFactory.cpp
 217aaea75cfbac9e5df8ea220aa2ea62 *src/samplerFactory.h
-05837d69c58fb61adde548841cb0c77c *src/semisupervisedSampler.cpp
+726d645b198254abfa88cc555dc33bc3 *src/semisupervisedSampler.cpp
 3cd4378e2f5ca4465a9187d298f89e66 *src/semisupervisedSampler.h
 d86e1b08826f1b6c94202159d6b6a617 *src/semisupervisedSamplerFactory.cpp
 b7221e7805936fd24881f6b3a93c9c0a *src/semisupervisedSamplerFactory.h
